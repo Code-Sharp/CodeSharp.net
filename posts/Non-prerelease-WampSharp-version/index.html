@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Non-prerelease WampSharp version | CodeSharp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="/">
+  <link rel="stylesheet" href="/css/app.css">
+  <!-- <link rel='stylesheet' href='http://fonts.useso.com/css?family=Source+Code+Pro'> -->
+  
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-98663639-3', 'auto');
+	ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+  <nav class="app-nav">
+  
+    
+      <a href="/.">home</a>
+    
+  
+    
+      <a href="/archives">archive</a>
+    
+  
+    
+      <a href="/atom.xml">rss</a>
+    
+  
+</nav>
+
+  <main class="post">
+  <article>
+  <h1 class="article-title">
+    <a href="/posts/Non-prerelease-WampSharp-version/">Non-prerelease WampSharp version</a>
+  </h1>
+
+  <section class="article-meta">
+    <p class="article-date">March 14 2018</p>
+  </section>
+
+  <section class="article-entry">
+    <p>Yesterday I released the first non-prerelease version of <a href="http://wampsharp.net" target="_blank" rel="noopener">WampSharp</a>. This was requested and discussed by the community in this <a href="https://github.com/Code-Sharp/WampSharp/issues/237" target="_blank" rel="noopener">issue</a>.</p>
+<p>I thought to take this opportunity to write a bit about this open source project, and my journey in the WAMP world.</p>
+<p>I began working on WampSharp in April 2013. I looked for a WebSocket subprotocol which supports both RPC and PubSub, and came across <a href="https://stackoverflow.com/a/10882808" target="_blank" rel="noopener">this answer on StackOverflow</a>. The first version <a href="https://groups.google.com/d/msg/wampws/dR2j0U6E5m4/ijkrlHCgbF0J" target="_blank" rel="noopener">was released</a> around July 2013 and contained <a href="https://web.archive.org/web/20130511044655/http://wamp.ws:80/spec" target="_blank" rel="noopener">WAMP v1</a> support for both server and client sides. During its first year, the project did not receive almost any attention from the community.</p>
+<p>Around December 2013, work on <a href="https://groups.google.com/d/msg/wampws/7KykR53SP1w/kzoIWV5JOP8J" target="_blank" rel="noopener">WAMP v2 spec</a> began. Around late September 2014, the first WampSharp supporting <a href="http://wamp-proto.org/spec/" target="_blank" rel="noopener">WAMP v2</a> was <a href="https://groups.google.com/d/msg/wampws/lLxrrRYDozw/DVLx31-p7sAJ" target="_blank" rel="noopener">released</a>. Since then, I’ve released every year at least one major WampSharp version, and several hotfix versions, summing up to 53 versions. Usually the annual major version tries to catch up with <a href="https://crossbar.io" target="_blank" rel="noopener">Crossbar.io</a>.</p>
+<h3 id="Community"><a href="#Community" class="headerlink" title="Community"></a>Community</h3><p>Nowadays, WampSharp has dozens of users, spread all over the world. A lot of WampSharp’s development is due to the community. This involves some features (mainly authentication features), bug reporting and bug fixes. There were <a href="https://github.com/Code-Sharp/WampSharp/issues/92" target="_blank" rel="noopener">several times</a> where community members <a href="https://gist.github.com/darkl/28380eced333ac8ff0fcc4df6cb2f21e#gistcomment-1975910" target="_blank" rel="noopener">helped me</a> figure out how to reproduce a previously reported bug.</p>
+<h3 id="Contribution-to-other-open-source-projects"><a href="#Contribution-to-other-open-source-projects" class="headerlink" title="Contribution to other open source projects"></a>Contribution to other open source projects</h3><p>WampSharp’s presence made me and others contribute to other non-WAMP related projects, as some of the issues filed for WampSharp turned out to be issues of other libraries. These include <a href="https://github.com/statianzo/Fleck/issues/70" target="_blank" rel="noopener">feature requests</a> and <a href="https://github.com/vtortola/WebSocketListener/issues/47" target="_blank" rel="noopener">issue filing</a> for WebSockets libraries, and sometimes even <a href="https://github.com/kerryjiang/WebSocket4Net/pull/41" target="_blank" rel="noopener">pull requests</a> to resolve these! Beside these, I submitted <a href="https://github.com/damianh/LibLog/pulls?q=is%3Apr+author%3Adarkl+is%3Aclosed" target="_blank" rel="noopener">various pull requests</a> for LibLog and also filed issues for the <a href="https://github.com/msgpack/msgpack-cli/issues/39" target="_blank" rel="noopener">.NET MessagePack implementation</a>, and even <a href="https://bugzilla.xamarin.com/show_bug.cgi?id=13110" target="_blank" rel="noopener">for Mono</a> and <a href="https://github.com/aspnet/AspNetKatana/issues/155" target="_blank" rel="noopener">IIS Express</a>! These were all found via WampSharp related scenarios.</p>
+<p>I also tried to contribute to the WAMP ecosystem in various ways. These include providing a <a href="https://github.com/crossbario/crossbar/pull/135" target="_blank" rel="noopener">C# template</a> to Crossbar.io, providing <a href="https://github.com/DefinitelyTyped/DefinitelyTyped/pull/3956" target="_blank" rel="noopener">type declarations</a> for <a href="https://github.com/crossbario/autobahn-js" target="_blank" rel="noopener">AutobahnJS</a> (the most popular JavaScript implementation of WAMP), providing WAMP messages parsing code for a <a href="https://github.com/firebug/websocket-monitor/issues/32" target="_blank" rel="noopener">Firefox developer extension</a>. I also created a project called <a href="https://github.com/darkl/meta-wamp" target="_blank" rel="noopener">meta-wamp</a> which provides WAMP messages declaration files, from which one can generate a WAMP related library.</p>
+<h3 id="Bringing-WampSharp-features-to-other-languages"><a href="#Bringing-WampSharp-features-to-other-languages" class="headerlink" title="Bringing WampSharp features to other languages"></a>Bringing WampSharp features to other languages</h3><p>In my opinion, the <a href="http://wampsharp.net/tags/reflection/" target="_blank" rel="noopener">reflection based roles</a> are among the nicest features WampSharp has to offer. I tried mimicking this in other languages. One attempt was <a href="/posts/introducing-typedautobahn/" title="the TypedAutobahn project">the TypedAutobahn project</a>, which, unfortunately, was never completed. I couple months ago, I submitted an initial reflection based features <a href="https://github.com/crossbario/autobahn-java/pull/356" target="_blank" rel="noopener">pull request</a> to <a href="https://github.com/crossbario/autobahn-java" target="_blank" rel="noopener">autobahn-java</a>, which was merged. Hopefully, this feature will be useful for WAMP Java developers.</p>
+<h3 id="Future"><a href="#Future" class="headerlink" title="Future"></a>Future</h3><p>It seems that WAMPv2 has kind of staled, and that the most critical period of its development was around 2014-2015. Hopefully, .NET Core has staled, and I won’t have to make any more crazy changes in order to keep supporting this platform. I do plan to continue maintaining WampSharp, which includes answering questions and handling issues on GitHub. I hope I’ll be able to release at least one major version per year.</p>
+
+  </section>
+</article>
+
+  <div class="sharing grid">
+  <section class="profile grid-item grid">
+    <img class="avatar" src="/images/avatar.png" alt="avatar" />
+    <div class="grid-item">
+      <p class="title"> CodeSharp </p>
+      <p class="subtitle"> Stronger Better Faster Sharper </p>
+    <div>
+  </section>
+
+  <section class="share-btns">
+    <!-- <p> share it if you like it~ </p> -->
+    <a
+  class="twitter-share-button"
+  data-size="large"
+  data-via="DrakeLeung"
+  href="https://twitter.com/intent/tweet?text=Yesterday I released"
+>
+  Tweet
+</a>
+
+<script>
+  window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  js.async = true;
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
+</script>
+
+  </section>
+</div>
+
+
+  
+</main>
+
+</body>
+</html>
