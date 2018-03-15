@@ -11,7 +11,7 @@ I thought to take this opportunity to write a bit about this open source project
 
 I began working on WampSharp in April 2013. I looked for a WebSocket subprotocol which supports both RPC and PubSub, and came across [this answer on StackOverflow](https://stackoverflow.com/a/10882808). The first version [was released](https://groups.google.com/d/msg/wampws/dR2j0U6E5m4/ijkrlHCgbF0J) around July 2013 and contained [WAMP v1](https://web.archive.org/web/20130511044655/http://wamp.ws:80/spec) support for both server and client sides. During its first year, the project did not receive almost any attention from the community.
 
-Around December 2013, work on [WAMP v2 spec](https://groups.google.com/d/msg/wampws/7KykR53SP1w/kzoIWV5JOP8J) began. Around late September 2014, the first WampSharp supporting [WAMP v2](http://wamp-proto.org/spec/) was [released](https://groups.google.com/d/msg/wampws/lLxrrRYDozw/DVLx31-p7sAJ). Since then, I've released every year at least one major WampSharp version, and several hotfix versions, summing up to 53 versions. Usually the annual major version tries to catch up with [Crossbar.io](https://crossbar.io).
+Around December 2013, work on [WAMP v2 spec](https://groups.google.com/d/msg/wampws/7KykR53SP1w/kzoIWV5JOP8J) began. Around late September 2014, the first WampSharp version supporting [WAMP v2](http://wamp-proto.org/spec/) was [released](https://groups.google.com/d/msg/wampws/lLxrrRYDozw/DVLx31-p7sAJ). Since then, I've released every year at least one major WampSharp version, and several hotfix versions, summing up to 53 versions. Usually the annual major version tries to catch up with [Crossbar.io](https://crossbar.io).
 
 ### Community
 
@@ -25,7 +25,7 @@ I also tried to contribute to the WAMP ecosystem in various ways. These include 
 
 ### Bringing WampSharp features to other languages
 
-In my opinion, the [reflection based roles](http://wampsharp.net/tags/reflection/) are among the nicest features WampSharp has to offer. I tried mimicking this in other languages. One attempt was {% post_link introducing-typedautobahn the TypedAutobahn project %}, which, unfortunately, was never completed. I couple months ago, I submitted an initial reflection based features [pull request](https://github.com/crossbario/autobahn-java/pull/356) to [autobahn-java](https://github.com/crossbario/autobahn-java), which was merged. Hopefully, this feature will be useful for WAMP Java developers.
+In my opinion, the [reflection based roles](http://wampsharp.net/tags/reflection/) are among the nicest features WampSharp has to offer. I tried mimicking this in other languages. One attempt was {% post_link introducing-typedautobahn the TypedAutobahn project %}, which, unfortunately, was never completed. A couple months ago, I submitted an initial reflection based features [pull request](https://github.com/crossbario/autobahn-java/pull/356) to [autobahn-java](https://github.com/crossbario/autobahn-java), which was merged. Hopefully, this feature will be useful for WAMP Java developers.
 
 ### Future
 
